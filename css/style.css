@@ -308,6 +308,21 @@ iframe {
     color: white;
 }
 /* ===== MEDIA QUERIES ===== */
+@media (max-width: 767px) {
+  /* Gaya khusus untuk mobile */
+  .title{
+    font-size: 0.8rem;
+  }
+  .kontakright h3 {
+    font-size: 0.8rem;
+  }
+  .infoitem i {
+    font-size: 1rem;
+  }
+  .infoitem span {
+    font-size: 0.8rem;
+  }
+}
   @media screen and (min-width: 768px) {
     .carousel-control-prev,
     .carousel-control-next {

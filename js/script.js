@@ -55,7 +55,6 @@ offcanvasLinks.forEach(link => {
     // Jika tautan adalah "Informasi"
     if (targetLink.textContent.trim() === 'Informasi') {
       // Ubah warna teks menjadi hijau
-      targetLink.style.color = 'green';
       return; // Jangan tutup offcanvas untuk "Informasi"
     }
 
