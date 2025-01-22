@@ -1,28 +1,40 @@
 // Tambahkan event listener pada semua link di navbar
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', event => {
-    // Cegah default behavior dari tautan
+    const targetLink = event.target;
+
+    // Cegah default behavior
     event.preventDefault();
 
     // Hapus kelas .active dari semua tautan
     document.querySelectorAll('.nav-link').forEach(item => item.classList.remove('active'));
 
     // Tambahkan kelas .active ke tautan yang diklik
-    event.target.classList.add('active');
+    targetLink.classList.add('active');
 
-    // Dapatkan id section yang ingin dituju
-    const sectionId = event.target.getAttribute('href').replace('#', '');
-    const section = document.getElementById(sectionId);
+    // Dapatkan href dari tautan
+    const href = targetLink.getAttribute('href');
 
-    // Scroll langsung ke elemen <h2> dalam section
-    if (section) {
-      const header = section.querySelector('h2');
-      if (header) {
+    // Jika href mengarah ke halaman index atau memiliki ID section
+    if (href && href.includes('index.html#')) {
+      // Navigasi ke halaman index dengan fragment
+      window.location.href = href;
+      return;
+    }
+
+    // Jika mengarah ke ID section di halaman yang sama
+    if (href && href.startsWith('#')) {
+      const sectionId = href.replace('#', '');
+      const section = document.getElementById(sectionId);
+
+      // Scroll langsung ke elemen section
+      if (section) {
+        const header = section.querySelector('h2'); // Contoh target adalah <h2> dalam section
         const navbarHeight = document.querySelector('.navbar').offsetHeight; // Tinggi navbar
         const additionalOffset = 25; // Jarak tambahan di atas elemen
-        const offset = header.getBoundingClientRect().top + window.scrollY - navbarHeight - additionalOffset;
+        const offset = (header || section).getBoundingClientRect().top + window.scrollY - navbarHeight - additionalOffset;
 
-        // Lakukan smooth scrolling ke posisi <h2> dengan jarak tambahan
+        // Lakukan smooth scrolling
         window.scrollTo({
           top: offset,
           behavior: 'smooth',
@@ -32,9 +44,6 @@ document.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 
-
-
-
 // Seleksi elemen offcanvas dan semua tautan dalam offcanvas
 const offcanvasElement = document.getElementById('offcanvasNavbar');
 const offcanvasLinks = document.querySelectorAll('#offcanvasNavbar .nav-link');
@@ -43,10 +52,11 @@ offcanvasLinks.forEach(link => {
   link.addEventListener('click', event => {
     const targetLink = event.target;
 
-    // Periksa jika elemen yang diklik adalah Navbar Informasi
+    // Jika tautan adalah "Informasi"
     if (targetLink.textContent.trim() === 'Informasi') {
-      // Jangan tutup offcanvas jika elemen adalah Navbar Informasi
-      return;
+      // Ubah warna teks menjadi hijau
+      targetLink.style.color = 'green';
+      return; // Jangan tutup offcanvas untuk "Informasi"
     }
 
     // Tutup offcanvas untuk tautan lainnya
