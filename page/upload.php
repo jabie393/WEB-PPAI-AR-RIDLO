@@ -13,31 +13,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $uploadDir = '../uploads/';
         $uploadPath = $uploadDir . basename($image['name']);
 
-        // Buat folder jika belum ada
         if (!is_dir($uploadDir)) {
             mkdir($uploadDir, 0777, true);
         }
 
-        // Temukan gambar lama dalam halaman HTML
         $htmlPath = "../$page";
         if (file_exists($htmlPath)) {
             $htmlContent = file_get_contents($htmlPath);
 
-            // Ambil path gambar lama dari elemen <img src="">
             preg_match('/<section.*?<img src="(.*?)"/s', $htmlContent, $matches);
             if (!empty($matches[1])) {
                 $oldImagePath = $matches[1];
                 $oldImageFullPath = realpath(dirname(__FILE__) . '/../uploads/' . $oldImagePath);
-
-                // Hapus gambar lama jika ada
                 if ($oldImageFullPath && file_exists($oldImageFullPath)) {
                     unlink($oldImageFullPath);
                 }
             }
 
-            // Pindahkan file yang diunggah
             if (move_uploaded_file($image['tmp_name'], $uploadPath)) {
-                // Update elemen gambar di dalam <section> saja
                 $updatedContent = preg_replace_callback(
                     '/<section.*?<img src=".*?"(.*?)>/s',
                     function ($matches) use ($uploadPath) {
@@ -50,18 +43,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $htmlContent
                 );
 
-                // Simpan perubahan
                 file_put_contents($htmlPath, $updatedContent);
-                echo "Gambar berhasil diperbarui dan gambar lama dihapus.";
+
+                // Tambahkan pesan sukses ke session
+                $_SESSION['flash_message'] = 'Gambar berhasil diperbarui!';
+                $_SESSION['flash_message_type'] = 'success';
             } else {
-                echo "Gagal mengunggah gambar baru.";
+                $_SESSION['flash_message'] = 'Gagal mengunggah gambar baru.';
+                $_SESSION['flash_message_type'] = 'danger';
             }
         } else {
-            echo "Halaman tidak ditemukan.";
+            $_SESSION['flash_message'] = 'Halaman tidak ditemukan.';
+            $_SESSION['flash_message_type'] = 'warning';
         }
     } else {
-        echo "Terjadi kesalahan saat mengunggah gambar.";
+        $_SESSION['flash_message'] = 'Terjadi kesalahan saat mengunggah gambar.';
+        $_SESSION['flash_message_type'] = 'danger';
     }
+    header("Location: admin.php"); // Redirect kembali ke halaman admin
+    exit();
 } else {
     echo "Invalid request method.";
 }

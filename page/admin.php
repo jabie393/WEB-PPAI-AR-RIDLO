@@ -5,44 +5,26 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
     exit();
 }
 
-// Proses upload gambar
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $page = $_POST['page'];
-    $image = $_FILES['image'];
+$flashMessage = '';
+$flashMessageType = '';
 
-    if ($image['error'] === UPLOAD_ERR_OK) {
-        $uploadDir = '../uploads/';
-        $uploadPath = $uploadDir . basename($image['name']);
+if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type'])) {
+    $flashMessage = $_SESSION['flash_message'];
+    $flashMessageType = $_SESSION['flash_message_type'];
 
-        if (move_uploaded_file($image['tmp_name'], $uploadPath)) {
-            echo "Gambar berhasil diunggah!";
-        } else {
-            echo "Gagal mengunggah gambar.";
-        }
-    } else {
-        echo "Terjadi kesalahan saat mengunggah gambar.";
-    }
+    // Hapus pesan flash setelah ditampilkan
+    unset($_SESSION['flash_message']);
+    unset($_SESSION['flash_message_type']);
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel PPAI AR-RIDLO</title>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mate+SC&family=Numans&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sancreek&display=swap" rel="stylesheet">
-
-    <!-- Css -->
     <link rel="stylesheet" href="../css/admin.css">
-
-    <!-- Bootsrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 </head>
 <body>
         <!-- Navbar -->
@@ -79,10 +61,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </div>
       </nav>
 
-    <div class="container-fluid p-0">
-
+      <div class="container-fluid p-0">
         <div class="container mt-5">
             <h1 class="text-center mb-4">Selamat datang Admin!</h1>
+
+            <!-- Flash Message -->
+            <?php if ($flashMessage): ?>
+                <div class="alert alert-<?= htmlspecialchars($flashMessageType) ?> alert-dismissible fade show" role="alert">
+                    <?= htmlspecialchars($flashMessage) ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php endif; ?>
+
             <form action="upload.php" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="pageSelect" class="form-label">Pilih Halaman:</label>
@@ -101,9 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </form>
         </div>
     </div>
-    <!-- JavaScript -->
-    <script src="../js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
