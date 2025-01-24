@@ -71,6 +71,17 @@ body {
     border-color: var(--first-color);
     background-color: var(--first-color);
 }
+.adminbtn {
+  margin-left: 15px;
+  color: white;
+  border-color: #FFC107;
+  background-color: #FFC107;
+}
+.adminbtn:hover {
+  color: white;
+  border-color: #ffca29;
+  background-color: #ffca29;
+}
 .offcanvas-title {
     color: white;
     font-family: "poppins", serif;
@@ -322,6 +333,9 @@ iframe {
   }
   .infoitem span {
     font-size: 0.8rem;
+  }
+  .offcanvas .btn {
+    margin-bottom: 10px;
   }
 }
   @media screen and (min-width: 768px) {

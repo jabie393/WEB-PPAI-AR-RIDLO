@@ -71,6 +71,17 @@ body {
     border-color: var(--first-color);
     background-color: var(--first-color);
 }
+.adminbtn {
+  margin-left: 15px;
+  color: white;
+  border-color: #FFC107;
+  background-color: #FFC107;
+}
+.adminbtn:hover {
+  color: white;
+  border-color: #ffca29;
+  background-color: #ffca29;
+}
 .offcanvas-title {
     color: white;
     font-family: "poppins", serif;
@@ -151,7 +162,15 @@ body {
         height: auto; /* Biarkan tinggi img menyesuaikan dengan lebar */
       }
   }
-  
+  @media (max-width: 767px) {
+    /* Gaya khusus untuk mobile */
+    .title{
+      font-size: 0.8rem;
+    }
+    .offcanvas .btn {
+      margin-bottom: 10px;
+    }
+  }
   @media (min-width: 768px) {
     /* Gaya khusus untuk layar tablet */
     .title {

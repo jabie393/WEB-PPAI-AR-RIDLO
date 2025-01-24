@@ -81,6 +81,29 @@ body {
     align-items: center; /* Menyelaraskan secara horizontal di tengah */
     gap: 0px;
 }
+.form-select {
+  border-color: #28a745!important; /* Warna hijau */
+}
+.form-select:focus {
+  background-color: #c3e6cb!important; /* Warna hijau lebih cerah saat fokus */
+  border-color: #28a745; /* Warna hijau saat fokus */
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5)!important; /* Efek cahaya hijau */
+}
+.form-select:active {
+  background-color: #c3e6cb!important; /* Warna hijau lebih cerah saat fokus */
+  border-color: #28a745; /* Warna hijau saat fokus */
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5)!important; /* Efek cahaya hijau */
+}
+.imgselect:focus {
+  background-color: #c3e6cb!important; /* Warna hijau lebih cerah saat fokus */
+  border-color: #28a745; /* Warna hijau saat fokus */
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5)!important; /* Efek cahaya hijau */
+}
+.imgselect:active {
+  background-color: #c3e6cb!important; /* Warna hijau lebih cerah saat fokus */
+  border-color: #28a745; /* Warna hijau saat fokus */
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5)!important; /* Efek cahaya hijau */
+}
 .uploadbtn {
     color: white!important;
     border-color: var(--first-color)!important;
