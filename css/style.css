@@ -358,6 +358,9 @@ footer .social-media a:hover {
   .offcanvas .btn {
     margin-bottom: 10px;
   }
+  .img-fluid {
+    width: 200px;
+  }
 }
   @media screen and (min-width: 768px) {
     .carousel-control-prev,
