@@ -314,11 +314,32 @@ iframe {
     transition: background-color 0.3s ease;
     margin-top: 10px;
 }
-
 .mapbtn:hover {
     background-color: var(--second-color);
     color: white;
 }
+/*styling footer*/
+footer {
+  margin-top: 20px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  background-color: var(--second-color);
+  color: #e0d9d9;
+  padding: 20px;
+}
+
+.footer-content, .footer-links, .social-media, .footer-bottom {
+  font-family: 'poppins';
+  margin-bottom: 15px;
+
+}
+
+footer .social-media a:hover {
+  transform: scale(1.2); /* Animasi hover */
+  transition: transform 0.3s ease;
+}
+
+
 /* ===== MEDIA QUERIES ===== */
 @media (max-width: 767px) {
   /* Gaya khusus untuk mobile */
