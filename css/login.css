@@ -148,6 +148,50 @@ body {
     width: 400px;
     border-radius: 0.5rem;
 }
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+}
+/* Tambahkan gaya khusus untuk field form */
+.form-control {
+    border-color: #28a745; /* Warna hijau */
+    background-color: green!important;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.form-control:focus {
+    background-color: #c3e6cb!important; /* Warna hijau lebih cerah saat fokus */
+    border-color: #28a745; /* Warna hijau saat fokus */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Efek cahaya hijau */
+}
+.loginbtn {
+    margin-top: 10px;
+    color: white;
+    background-color: green;
+    border-color: green;
+}
+.loginbtn:hover {
+    color: white;
+    background-color: #B8B6B6;
+    border-color: #B8B6B6;
+}
+.loginbtn:after {
+    color: white;
+    background-color: #B8B6B6!important;
+    border-color: #B8B6B6!important;
+}
+.loginbtn:focus {
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
 /*styling footer*/
 footer {
   margin-top: 20px;
@@ -168,69 +212,4 @@ footer .social-media a:hover {
   transform: scale(1.2); /* Animasi hover */
   transition: transform 0.3s ease;
 }
-/* ===== MEDIA QUERIES ===== */
-@media (max-width: 480px) {
-    /* Gaya khusus untuk layar kecil */
-    .title {
-      font-size: 0.8rem;
-    }
-    .subtitle {
-      font-size: 0.7rem;
-    }
-    .mainimg img {
-        width: 80vw; /* Ubah ukuran img menjadi 80% dari lebar layar */
-        height: auto; /* Biarkan tinggi img menyesuaikan dengan lebar */
-      }
-  }
-  @media (max-width: 767px) {
-    /* Gaya khusus untuk mobile */
-    .title{
-      font-size: 0.8rem;
-    }
-    .offcanvas .btn {
-      margin-bottom: 10px;
-    }
-    .navbtn {
-      margin-top: 20px;
-    }
-  }
-  @media (min-width: 768px) {
-    /* Gaya khusus untuk layar tablet */
-    .title {
-      font-size: 1rem;
-    }
-    .subtitle {
-      font-size: 0.9rem;
-    }
-    .mainimg img {
-      width: 400px;
-    }
-  }
-  
-  @media (min-width: 992px) {
-    /* Gaya khusus untuk layar desktop */
-    .title {
-      font-size: 1.2rem;
-    }
-    .subtitle {
-      font-size: 1rem;
-    }
-    .mainimg img {
-      width: 600px;
-    }
-  }
-  
-  @media (min-width: 1200px) {
-    /* Gaya khusus untuk layar desktop besar */
-    .title {
-      font-size: 1.5rem;
-    }
-    .subtitle {
-      font-size: 1.2rem;
-    }
-    .mainimg img {
-      width: 800px;
-    }
-  }
-  
 

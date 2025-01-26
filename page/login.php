@@ -24,56 +24,75 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PPAI AR-RIDLO</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <style>
-        .container {
-            height: 100vh;
-            justify-content: center;
-            align-items: center;
-        }
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .logo {
-            width: 50px;
-            height: auto;
-            margin: 0 auto;
-        }
-        /* Tambahkan gaya khusus untuk field form */
-        .form-control {
-            border-color: #28a745; /* Warna hijau */
-            background-color: green!important;
-        }
-        .form-control:focus {
-            background-color: #c3e6cb!important; /* Warna hijau lebih cerah saat fokus */
-            border-color: #28a745; /* Warna hijau saat fokus */
-            box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Efek cahaya hijau */
-        }
-        .btn {
-            color: white;
-            background-color: green;
-            border-color: green;
-        }
-        .btn:hover {
-            color: white;
-            background-color: #B8B6B6;
-            border-color: #B8B6B6;
-        }
-        .btn:after {
-            color: white;
-            background-color: #B8B6B6!important;
-            border-color: #B8B6B6!important;
-        }
-        .btn:focus {
-            box-shadow: none;
-            border: none;
-            outline: none;
-        }
-    </style>
+
+    <!-- Link Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Ikon Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/login.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mate+SC&family=Numans&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sancreek&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md sticky-top py-3 mynavbar">
+        <div class="container d-flex justify-content-between align-items-center">
+          <!-- Brand Logo dan Nama -->
+          <div class="d-flex align-items-center">
+            <img src="../assets/logo/logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+            <a class="navbar-brand mb-0" href="#">PPAI AR-RIDLO</a>
+          </div>
+      
+          <!-- Tombol Toggle -->
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <!-- Offcanvas Menu -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">PPAI AR-RIDLO</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="../index.html#profil">Profil</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Informasi
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="biaya.html"><i class="bi bi-cash"></i> Biaya</a></li>
+                  <li><a class="dropdown-item" href="info_pendaftaran.html"><i class="bi bi-person"></i> Info Pendaftaran</a></li>
+                  <li><a class="dropdown-item" href="jadwal.html"><i class="bi bi-calendar"></i> Jadwal Kegiatan</a></li>
+                  <li><a class="dropdown-item" href="peraturan.html"><i class="bi bi-bank"></i> Peraturan Pesantren</a></li>
+                </ul>
+              </li>
+              <a class="nav-link" href="../index.html#ekstra">Ekstra</a>
+              <a class="nav-link" href="../index.html#galeri">Galeri</a>
+              <a class="nav-link" href="../index.html#kontak">Kontak</a>
+              <a href="" class="btn btn-sm btn-outline-secondary d-flex justify-content-center align-items-center w-100 navbtn" type="button">
+                <i class="bi bi-person me-2"></i>
+                Pendaftaran
+              </a>
+              <a href="../page/admin.php"class="btn btn-sm btn-outline-secondary d-flex justify-content-center align-items-center w-100 adminbtn" type="button">
+                <i class="bi bi-person-circle me-2"></i>
+                Admin
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-4 mt-5">
@@ -92,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <label for="password">Password:</label>
                                 <input type="password" id="password" name="password" class="form-control" required>
                             </div>
-                            <button type="submit" class="btn btn-block">Login</button>
+                            <button type="submit" class="btn btn-block loginbtn">Login</button>
                         </form>
                         <?php if (isset($_POST['username']) && isset($_POST['password'])) : ?>
                             <div class="alert alert-danger mt-3">
@@ -104,5 +123,72 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </div>
     </div>
+    <!-- Footer -->
+<footer class="text-light py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Logo dan Visi -->
+      <div class="col-md-4 mb-4">
+        <div class="col-12 text-center mb-4">
+          <img src="../assets/logo/logo panjang.png" alt="logo" class="img-fluid" style="width: 300px;">
+        </div>
+        <p class="small text-center">Tawang RT 30 RW 06, Sukowilagun, Kec. Kalipare, Kabupaten Malang, Jawa Timur 65166.</p>
+      </div>
+
+      <!-- Pendidikan -->
+      <div class="col-md-4 mb-4 mt-4">
+        <h5 class="mb-3">PENDIDIKAN</h5>
+        <ul class="list-unstyled">
+          <li><a href="#madin" class="text-light text-decoration-none">Madrasah Diniyah</a></li>
+          <li><a href="#mts" class="text-light text-decoration-none">Madrasah Tsanawiyah (MTS)</a></li>
+          <li><a href="#ma" class="text-light text-decoration-none">Madrasah Aliyah</a></li>
+        </ul>
+      </div>
+
+      <!-- Link Cepat -->
+      <div class="col-md-4 mb-4 mt-4">
+        <h5 class="mb-3">LINK CEPAT</h5>
+        <ul class="list-unstyled">
+          <li><a href="#berita" class="text-light text-decoration-none">Tentang Kami</a></li>
+          <li><a href="#contact" class="text-light text-decoration-none">Lembaga AR-RIDLO</a></li>
+          <li><a href="#galeri-photo" class="text-light text-decoration-none">Kebijakan Privasi</a></li>
+        </ul>
+      </div>
+    </div>
+
+        <!-- Visitor Counter -->
+        <div class="col-12 text-center mt-4">
+          <p class="small">Jumlah Pengunjung:</p>
+          <a href="https://www.hitwebcounter.com" target="_blank">
+            <img src="https://hitwebcounter.com/counter/counter.php?page=18663393&style=0006&nbdigits=5&type=page&initCount=0" 
+                 title="Counter Widget" 
+                 alt="Visit counter For Websites" 
+                 border="0" />
+          </a>
+        </div>
+
+    <!-- Social Media -->
+    <div class="col-12 text-center mt-4">
+      <div class="social-media d-flex justify-content-center gap-4">
+        <a href="Main.html" class="text-light"><i class="bi bi-globe fs-4"></i></a>
+        <a href="#Link Facebook" class="text-light"><i class="bi bi-facebook fs-4"></i></a>
+        <a href="#Link Instagram" class="text-light"><i class="bi bi-instagram fs-4"></i></a>
+        <a href="#Link Twitter x" class="text-light"><i class="bi bi-twitter fs-4"></i></a>
+        <a href="#Link Youtube" class="text-light"><i class="bi bi-youtube fs-4"></i></a>
+      </div>
+    </div>
+
+    <hr class="my-4 border-light">
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom text-center mt-3">
+      <p class="mb-0">Hak Cipta &copy; 2025 PPAI AR-RIDLO. Hak Cipta Dilindungi.</p>
+    </div>
+  </div>
+</footer>
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 </html>
