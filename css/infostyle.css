@@ -170,6 +170,9 @@ body {
     .offcanvas .btn {
       margin-bottom: 10px;
     }
+    .navbtn {
+      margin-top: 20px;
+    }
   }
   @media (min-width: 768px) {
     /* Gaya khusus untuk layar tablet */

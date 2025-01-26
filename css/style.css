@@ -102,6 +102,11 @@ body {
     gap: 0px;
 }
 /* slide show style */
+.carouselcontainer {
+  background-color: whitesmoke;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
 .carousel-inner {
     display: flex;
     align-items: center;
@@ -163,7 +168,6 @@ body {
     align-items: center;
     gap: 20px;
     text-align: center;
-    background-color: whitesmoke;
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -201,9 +205,48 @@ body {
     width: 400px;
     border-radius: 0.5rem;
 }
+/* ekstra style */
+.ekstra .ekstracontainer {
+  max-width: 100%;
+  padding: 0 15px;
+}
+.ekstracontainer {
+  background-color: whitesmoke;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.ekstrasubtitle {
+  color: black;
+  text-align: center;
+  margin: 20px;
+  font-size: 1rem; /* Ukuran default untuk layar kecil */
+  line-height: 1.5; /* Menambahkan jarak antar baris untuk keterbacaan */
+}
+/* Warna untuk setiap ekstracard */
+.ekstracard-hadrah {
+  background-color: #32B9E6; /* Warna merah muda */
+}
+.ekstracard-qiraah {
+  background-color: #39BE2D; /* Warna hijau muda */
+}
+.ekstracard-voli {
+  background-color: #E78301; /* Warna biru muda */
+}
+/* Tambahan styling opsional */
+.ekstracard {
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.ekstracard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
 /* galeri style */
 .galeri {
-    padding-top: 100px;
+    padding-top: 20px;
 }
 .galeribtn {
     color: white;
@@ -358,6 +401,9 @@ footer .social-media a:hover {
   .offcanvas .btn {
     margin-bottom: 10px;
   }
+  .navbtn {
+    margin-top: 20px;
+  }
   .img-fluid {
     width: 200px;
   }
@@ -392,6 +438,11 @@ footer .social-media a:hover {
     }
     .profilimg {
       margin: 10px;
+    }
+    .ekstrasubtitle {
+      text-align: center;
+      font-size: 0.70rem;
+      line-height: 1.75;
     }
     .kontakcontainer {
       display: flex;
@@ -456,6 +507,10 @@ footer .social-media a:hover {
       font-size: 1rem;
       line-height: 2;
     }
+    .ekstrasubtitle {
+      font-size: 1rem;
+      line-height: 2;
+    }
     .kontakright h3 {
       font-size: 1.8rem;
       color: var(--first-color);
@@ -498,5 +553,4 @@ footer .social-media a:hover {
       font-size: 1.25rem;
     }
   }
-  
 
