@@ -23,7 +23,7 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel PPAI AR-RIDLO</title>
-
+    <link rel="icon" href="../assets/logo/logo square.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,6 +38,12 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
     <link rel="stylesheet" href="../css/admin.css">
     
 </head>
+
+<!-- Preload -->
+<div id="preloader">
+  <div class="spinner"></div>
+</div>
+
 <body>
         <!-- Navbar -->
         <nav class="navbar navbar-expand-md sticky-top py-3 mynavbar">
@@ -104,11 +110,11 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
         </div>
     </div>
 
-        <!-- Footer -->
-<footer class="text-light py-5">
+    <!-- Footer -->
+    <footer class="text-light py-5">
   <div class="container">
     <div class="row">
-      <!-- Logo dan Visi -->
+      <!-- Logo dan Alamat -->
       <div class="col-md-4 mb-4">
         <div class="col-12 text-center mb-4">
           <img src="../assets/logo/logo panjang.png" alt="logo" class="img-fluid" style="width: 300px;">
@@ -120,9 +126,9 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
       <div class="col-md-4 mb-4 mt-4">
         <h5 class="mb-3">PENDIDIKAN</h5>
         <ul class="list-unstyled">
-          <li><a href="#madin" class="text-light text-decoration-none">Madrasah Diniyah</a></li>
-          <li><a href="#mts" class="text-light text-decoration-none">Madrasah Tsanawiyah (MTS)</a></li>
-          <li><a href="#ma" class="text-light text-decoration-none">Madrasah Aliyah</a></li>
+          <li><a href="https://www.instagram.com/ppai_arridlo/" class="text-light text-decoration-none" target="_blank">Madrasah Diniyah</a></li>
+          <li><a href="https://www.instagram.com/mtsbahrulhuda/" class="text-light text-decoration-none" target="_blank">Madrasah Tsanawiyah (MTS)</a></li>
+          <li><a href="https://www.instagram.com/ma_arridlo/" class="text-light text-decoration-none" target="_blank">Madrasah Aliyah</a></li>
         </ul>
       </div>
 
@@ -130,30 +136,19 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
       <div class="col-md-4 mb-4 mt-4">
         <h5 class="mb-3">LINK CEPAT</h5>
         <ul class="list-unstyled">
-          <li><a href="#berita" class="text-light text-decoration-none">Tentang Kami</a></li>
-          <li><a href="#contact" class="text-light text-decoration-none">Lembaga AR-RIDLO</a></li>
-          <li><a href="#galeri-photo" class="text-light text-decoration-none">Kebijakan Privasi</a></li>
+          <li><a href="#Tentang Kami" class="text-light text-decoration-none">Tentang Kami</a></li>
+          <li><a href="#Yayasan SABIL AR-RIDLO" class="text-light text-decoration-none">Yayasan SABIL AR-RIDLO</a></li>
+          <li><a href="#Kebijakan Privasi" class="text-light text-decoration-none">Kebijakan Privasi</a></li>
         </ul>
       </div>
     </div>
 
-        <!-- Visitor Counter -->
-        <div class="col-12 text-center mt-4">
-          <p class="small">Jumlah Pengunjung:</p>
-          <a href="https://www.hitwebcounter.com" target="_blank">
-            <img src="https://hitwebcounter.com/counter/counter.php?page=18663393&style=0006&nbdigits=5&type=page&initCount=0" 
-                 title="Counter Widget" 
-                 alt="Visit counter For Websites" 
-                 border="0" />
-          </a>
-        </div>
-
     <!-- Social Media -->
     <div class="col-12 text-center mt-4">
       <div class="social-media d-flex justify-content-center gap-4">
-        <a href="Main.html" class="text-light"><i class="bi bi-globe fs-4"></i></a>
+        <a href="../index.html" class="text-light"><i class="bi bi-globe fs-4"></i></a>
         <a href="#Link Facebook" class="text-light"><i class="bi bi-facebook fs-4"></i></a>
-        <a href="#Link Instagram" class="text-light"><i class="bi bi-instagram fs-4"></i></a>
+        <a href="https://www.instagram.com/ppai_arridlo/" class="text-light"  target="_blank"><i class="bi bi-instagram fs-4"></i></a>
         <a href="#Link Twitter x" class="text-light"><i class="bi bi-twitter fs-4"></i></a>
         <a href="#Link Youtube" class="text-light"><i class="bi bi-youtube fs-4"></i></a>
       </div>
@@ -167,6 +162,9 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
     </div>
   </div>
 </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

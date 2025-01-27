@@ -24,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PPAI AR-RIDLO</title>
+    <link rel="icon" href="../assets/logo/logo square.png">
 
     <!-- Link Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -38,10 +39,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mate+SC&family=Numans&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sancreek&display=swap" rel="stylesheet">
-
-    <!-- Custom CSS -->
-
 </head>
+
+<!-- Preload -->
+<div id="preloader">
+  <div class="spinner"></div>
+</div>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md sticky-top py-3 mynavbar">
@@ -124,10 +128,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </div>
     <!-- Footer -->
-<footer class="text-light py-5">
+    <footer class="text-light py-5">
   <div class="container">
     <div class="row">
-      <!-- Logo dan Visi -->
+      <!-- Logo dan Alamat -->
       <div class="col-md-4 mb-4">
         <div class="col-12 text-center mb-4">
           <img src="../assets/logo/logo panjang.png" alt="logo" class="img-fluid" style="width: 300px;">
@@ -139,9 +143,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <div class="col-md-4 mb-4 mt-4">
         <h5 class="mb-3">PENDIDIKAN</h5>
         <ul class="list-unstyled">
-          <li><a href="#madin" class="text-light text-decoration-none">Madrasah Diniyah</a></li>
-          <li><a href="#mts" class="text-light text-decoration-none">Madrasah Tsanawiyah (MTS)</a></li>
-          <li><a href="#ma" class="text-light text-decoration-none">Madrasah Aliyah</a></li>
+          <li><a href="https://www.instagram.com/ppai_arridlo/" class="text-light text-decoration-none" target="_blank">Madrasah Diniyah</a></li>
+          <li><a href="https://www.instagram.com/mtsbahrulhuda/" class="text-light text-decoration-none" target="_blank">Madrasah Tsanawiyah (MTS)</a></li>
+          <li><a href="https://www.instagram.com/ma_arridlo/" class="text-light text-decoration-none" target="_blank">Madrasah Aliyah</a></li>
         </ul>
       </div>
 
@@ -149,30 +153,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <div class="col-md-4 mb-4 mt-4">
         <h5 class="mb-3">LINK CEPAT</h5>
         <ul class="list-unstyled">
-          <li><a href="#berita" class="text-light text-decoration-none">Tentang Kami</a></li>
-          <li><a href="#contact" class="text-light text-decoration-none">Lembaga AR-RIDLO</a></li>
-          <li><a href="#galeri-photo" class="text-light text-decoration-none">Kebijakan Privasi</a></li>
+          <li><a href="#Tentang Kami" class="text-light text-decoration-none">Tentang Kami</a></li>
+          <li><a href="#Yayasan SABIL AR-RIDLO" class="text-light text-decoration-none">Yayasan SABIL AR-RIDLO</a></li>
+          <li><a href="#Kebijakan Privasi" class="text-light text-decoration-none">Kebijakan Privasi</a></li>
         </ul>
       </div>
     </div>
 
-        <!-- Visitor Counter -->
-        <div class="col-12 text-center mt-4">
-          <p class="small">Jumlah Pengunjung:</p>
-          <a href="https://www.hitwebcounter.com" target="_blank">
-            <img src="https://hitwebcounter.com/counter/counter.php?page=18663393&style=0006&nbdigits=5&type=page&initCount=0" 
-                 title="Counter Widget" 
-                 alt="Visit counter For Websites" 
-                 border="0" />
-          </a>
-        </div>
-
     <!-- Social Media -->
     <div class="col-12 text-center mt-4">
       <div class="social-media d-flex justify-content-center gap-4">
-        <a href="Main.html" class="text-light"><i class="bi bi-globe fs-4"></i></a>
+        <a href="../index.html" class="text-light"><i class="bi bi-globe fs-4"></i></a>
         <a href="#Link Facebook" class="text-light"><i class="bi bi-facebook fs-4"></i></a>
-        <a href="#Link Instagram" class="text-light"><i class="bi bi-instagram fs-4"></i></a>
+        <a href="https://www.instagram.com/ppai_arridlo/" class="text-light"  target="_blank"><i class="bi bi-instagram fs-4"></i></a>
         <a href="#Link Twitter x" class="text-light"><i class="bi bi-twitter fs-4"></i></a>
         <a href="#Link Youtube" class="text-light"><i class="bi bi-youtube fs-4"></i></a>
       </div>
@@ -186,6 +179,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
   </div>
 </footer>
+
     <!-- JavaScript -->
     <script src="../js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

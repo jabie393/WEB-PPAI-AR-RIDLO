@@ -1,3 +1,15 @@
+    //js preload
+    window.onload = function () {
+      const preloader = document.getElementById('preloader');
+      preloader.style.opacity = '0'; // Tambahkan animasi transisi
+      preloader.style.transition = 'opacity 0.5s ease';
+  
+      // Tunggu hingga transisi selesai, lalu hapus preloader dari DOM
+      setTimeout(() => {
+      preloader.style.display = 'none';
+    }, 500); // Sesuai dengan durasi transisi
+  };
+
 // Tambahkan event listener pada semua link di navbar
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', event => {
