@@ -39,6 +39,7 @@
 body {
   background-color: white;
   font-family: "poppins", serif;
+  overflow-x: hidden;
 }
 /* navbar style */
 .mynavbar {
@@ -79,12 +80,18 @@ body {
 .navbar-nav {
   padding-right: 20px;
 }
-.nav-link {
+.navlink {
   color: white!important;
+  display: inline-block; /* Agar elemen tampil sejajar */
+  padding: 0.5rem 1rem; /* Memberikan ruang di dalam tautan */
+  text-decoration: none; /* Menghilangkan garis bawah */
+  transition: color 0.2s ease-in-out; /* Animasi halus untuk perubahan warna */
 }
-.nav-link:hover {
+
+.navlink:hover {
   color: var(--first-color)!important;
 }
+
 .navbtn {
   margin-left: 15px;
   color: white!important;
@@ -169,3 +176,10 @@ footer .social-media a:hover {
   transition: transform 0.3s ease;
 }
 
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 767px) {
+  .navbtn {
+    margin-top: 20px;
+  }
+
+}

@@ -40,6 +40,7 @@
 body {
     background-color: white;
     font-family: "poppins", serif;
+    overflow-x: hidden;
 }
 /* navbar style */
 .mynavbar {

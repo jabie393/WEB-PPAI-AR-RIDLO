@@ -40,6 +40,7 @@
 body {
     background-color: white;
     font-family: "poppins", serif;
+    overflow-x: hidden;
 }
 /* navbar style */
 .mynavbar {
@@ -420,6 +421,9 @@ footer .social-media a:hover {
 /* ===== MEDIA QUERIES ===== */
 @media (max-width: 767px) {
   /* Gaya khusus untuk mobile */
+  body {
+    overflow-x: hidden;
+  }
   .title{
     font-size: 0.8rem;
   }

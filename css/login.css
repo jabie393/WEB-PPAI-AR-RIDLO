@@ -40,6 +40,7 @@
 body {
     background-color: white;
     font-family: "poppins", serif;
+    overflow-x: hidden;
 }
 /* navbar style */
 .mynavbar {
@@ -196,7 +197,7 @@ body {
 /* Tambahkan gaya khusus untuk field form */
 .form-control {
     border-color: #28a745; /* Warna hijau */
-    background-color: green!important;
+    background-color: rgba(0, 128, 0, 0.247)!important;
     margin-top: 10px;
     margin-bottom: 20px;
 }

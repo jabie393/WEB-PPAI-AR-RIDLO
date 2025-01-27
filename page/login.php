@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <!-- Brand Logo dan Nama -->
           <div class="d-flex align-items-center">
             <img src="../assets/logo/logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
-            <a class="navbar-brand mb-0" href="#">PPAI AR-RIDLO</a>
+            <a class="navbar-brand mb-0" href="../">PPAI AR-RIDLO</a>
           </div>
       
           <!-- Tombol Toggle -->
