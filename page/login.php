@@ -43,7 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!-- Preload -->
 <div id="preloader">
-  <div class="spinner"></div>
+    <div class="spinner"></div>
+    <div class="progress-text">0%</div>
 </div>
 
 <body>

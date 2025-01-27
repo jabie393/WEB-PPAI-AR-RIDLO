@@ -15,20 +15,35 @@
   align-items: center;
   z-index: 9999; /* Pastikan preloader di atas konten lainnya */
 }
+/* Gaya untuk teks persentase */
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: bold;
+  color: green;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
 
 /* Gaya untuk spinner */
 .spinner {
   border: 8px solid grey; /* Warna latar belakang spinner */
-  border-top: 8px solid #3498db; /* Warna bagian yang berputar */
+  border-top: 8px solid green; /* Warna bagian yang berputar */
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   animation: spin 1s linear infinite; /* Animasi spin */
 }
 
 /* Animasi untuk spinner */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
+  0% { transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 

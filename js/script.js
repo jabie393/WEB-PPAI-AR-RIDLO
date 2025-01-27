@@ -1,14 +1,41 @@
     //js preload
-    window.onload = function () {
-      const preloader = document.getElementById('preloader');
-      preloader.style.opacity = '0'; // Tambahkan animasi transisi
-      preloader.style.transition = 'opacity 0.5s ease';
-  
-      // Tunggu hingga transisi selesai, lalu hapus preloader dari DOM
-      setTimeout(() => {
-      preloader.style.display = 'none';
+window.onload = function () {
+    const preloader = document.getElementById('preloader');
+    preloader.style.opacity = '0'; // Tambahkan animasi transisi
+    preloader.style.transition = 'opacity 0.5s ease';
+
+    // Tunggu hingga transisi selesai, lalu hapus preloader dari DOM
+    setTimeout(() => {
+        preloader.style.display = 'none';
+
+        // Pastikan animasi ScrollReveal dimulai setelah preload selesai
+        startAnimations();
     }, 500); // Sesuai dengan durasi transisi
-  };
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    const preloader = document.getElementById('preloader');
+    const progressText = document.querySelector('.progress-text');
+    const spinner = document.querySelector('.spinner');
+    
+    let progress = 0;
+
+    // Simulasikan pemuatan menggunakan interval
+    const interval = setInterval(() => {
+        if (progress < 100) {
+            progress += 1;
+            progressText.textContent = `${progress}%`;
+        } else {
+            clearInterval(interval);
+            preloader.style.opacity = '0';
+            preloader.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+                startAnimations(); // Pastikan fungsi ini dipanggil jika digunakan
+            }, 500);
+        }
+    }, 30); // Percepat interval sesuai kebutuhan
+});
 
 // Tambahkan event listener pada semua link di navbar
 document.querySelectorAll('.nav-link').forEach(link => {

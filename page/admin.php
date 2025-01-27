@@ -41,7 +41,8 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
 
 <!-- Preload -->
 <div id="preloader">
-  <div class="spinner"></div>
+    <div class="spinner"></div>
+    <div class="progress-text">0%</div>
 </div>
 
 <body>
