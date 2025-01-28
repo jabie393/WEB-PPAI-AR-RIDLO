@@ -1,17 +1,14 @@
     //js preload
-window.onload = function () {
-    const preloader = document.getElementById('preloader');
-    preloader.style.opacity = '0'; // Tambahkan animasi transisi
-    preloader.style.transition = 'opacity 0.5s ease';
-
-    // Tunggu hingga transisi selesai, lalu hapus preloader dari DOM
-    setTimeout(() => {
-        preloader.style.display = 'none';
-
-        // Pastikan animasi ScrollReveal dimulai setelah preload selesai
-        startAnimations();
+    window.onload = function () {
+      const preloader = document.getElementById('preloader');
+      preloader.style.opacity = '0'; // Tambahkan animasi transisi
+      preloader.style.transition = 'opacity 0.5s ease';
+  
+      // Tunggu hingga transisi selesai, lalu hapus preloader dari DOM
+      setTimeout(() => {
+      preloader.style.display = 'none';
     }, 500); // Sesuai dengan durasi transisi
-};
+  };
 
 document.addEventListener("DOMContentLoaded", () => {
     const preloader = document.getElementById('preloader');
