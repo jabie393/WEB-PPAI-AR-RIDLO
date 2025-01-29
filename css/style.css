@@ -244,13 +244,20 @@ body {
     margin: 20px;
     font-size: 1rem; /* Ukuran default untuk layar kecil */
     line-height: 1.5; /* Menambahkan jarak antar baris untuk keterbacaan */
+    text-indent: 20px;
 }
 .profilimg {
     justify-self: center;
+    max-width: 450px; /* Ukuran maksimum */
+    width: 100%; /* Responsif */
+    text-align: center;
 }
+
 .profilimg img {
-    width: 400px;
-    border-radius: 0.5rem;
+    width: 100%; /* Sesuaikan dengan parent */
+    height: auto; /* Jaga aspek rasio */
+    display: block;
+    margin: 0 auto;
 }
 /* ekstra style */
 .ekstra .ekstracontainer {
@@ -266,8 +273,9 @@ body {
   -o-border-radius: 15px;
 }
 .ekstrasubtitle {
+  text-indent: 20px;
   color: black;
-  text-align: center;
+  text-align: justify;
   margin: 20px;
   font-size: 1rem; /* Ukuran default untuk layar kecil */
   line-height: 1.5; /* Menambahkan jarak antar baris untuk keterbacaan */
@@ -315,6 +323,7 @@ body {
     font-size: 18px;
 }
 .card .card-text {
+    text-align: center;
     color: #666;
     font-size: 14px;
 }
@@ -498,7 +507,6 @@ footer {
       margin: 10px;
     }
     .ekstrasubtitle {
-      text-align: center;
       font-size: 0.70rem;
       line-height: 1.75;
     }
