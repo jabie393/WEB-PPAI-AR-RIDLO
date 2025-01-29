@@ -424,11 +424,19 @@ footer {
 
 }
 
-footer .social-media a:hover {
+.social-media a:hover {
   transform: scale(1.2); /* Animasi hover */
   transition: transform 0.3s ease;
 }
 
+.footer-bottom a {
+  color: white; /* Warna tautan */
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: var(--first-color);
+}
 
 /* ===== MEDIA QUERIES ===== */
 @media (max-width: 767px) {
