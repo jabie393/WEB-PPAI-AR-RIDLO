@@ -223,6 +223,25 @@ footer .social-media a:hover {
 .footer-bottom a:hover {
   color: var(--first-color);
 }
+.icon-link {
+  display: inline-block;
+}
+
+.iconkknt {
+  width: 32px; /* Ukuran ikon */
+  height: 32px;
+  transition: transform 0.2s ease-in-out, opacity 0.2s;
+  margin-right: 10px; /* Jarak antar ikon */
+}
+.iconf {
+  width: 16px; /* Ukuran ikon */
+  height: 32px;
+  transition: transform 0.2s ease-in-out, opacity 0.2s;
+}
+.icon-img:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
 /* ===== MEDIA QUERIES ===== */
 @media (max-width: 480px) {
     /* Gaya khusus untuk layar kecil */
