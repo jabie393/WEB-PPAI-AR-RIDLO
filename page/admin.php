@@ -52,7 +52,7 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
           <!-- Brand Logo dan Nama -->
           <div class="d-flex align-items-center">
             <img src="../assets/logo/logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
-            <a class="navbar-brand mb-0 navtitle" href="../">PPAI AR-RIDLO</a>
+            <a class="navbar-brand mb-0 navtitle" href="index.html">PPAI AR-RIDLO</a>
           </div>
 
           <!-- Tombol Toggle -->
@@ -69,7 +69,7 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
   </div>
   <div class="offcanvas-body">
   <ul class="navbar-nav me-3 mb-2 mb-lg-0">
-    <a href="../" class="navlink">Beranda</a>
+    <a href="index.html" class="navlink">Beranda</a>
   <a href="logout.php"class="btn d-flex justify-content-center align-items-center w-100 navbtn" type="button">
     <i class="bi bi-box-arrow-right me-2"></i>
         Logout</a>
