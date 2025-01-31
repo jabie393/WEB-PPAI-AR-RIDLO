@@ -65,7 +65,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
 
       // Scroll langsung ke elemen section
       if (section) {
-        const header = section.querySelector('h2'); // Contoh target adalah <h2> dalam section
+        const header = section.querySelector('h2') || section.firstElementChild; // Contoh target adalah <h2> dalam section
         const navbarHeight = document.querySelector('.navbar').offsetHeight; // Tinggi navbar
         const additionalOffset = 25; // Jarak tambahan di atas elemen
         const offset = (header || section).getBoundingClientRect().top + window.scrollY - navbarHeight - additionalOffset;

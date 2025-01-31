@@ -54,6 +54,9 @@ body {
     font-family: "poppins", serif;
     overflow-x: hidden;
 }
+section {
+  scroll-margin-top: 75px; /* Sesuaikan dengan tinggi navbar */
+}
 /* navbar style */
 .mynavbar {
     background-color: var(--second-color);
@@ -216,6 +219,7 @@ body {
     align-items: center;
     gap: 20px;
     text-align: center;
+    margin-bottom: 30px;
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -261,11 +265,17 @@ body {
     margin: 0 auto;
 }
 /* ekstra style */
-.ekstra .ekstracontainer {
-  max-width: 100%;
-  padding: 0 15px;
+.ekstra {
+  padding: 0px 15px;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
 .ekstracontainer {
+  max-width: 100%;
   background-color: whitesmoke;
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -301,9 +311,6 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 /* galeri style */
-.galeri {
-    padding-top: 20px;
-}
 .galeribtn {
     color: white;
     background-color: var(--first-color);
@@ -333,12 +340,13 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-bottom: 30px;
     gap: 20px;
     width: 100%;
 }
 /* Kontak Section */
 .kontak {
-    padding: 50px 15px;
+    padding: 0px 15px;
     background-color: whitesmoke;
     border-radius: 15px;
     -webkit-border-radius: 15px;
