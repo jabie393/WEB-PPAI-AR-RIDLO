@@ -125,9 +125,9 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
       <div class="col-md-4 mb-4 mt-4">
         <h5 class="mb-3">PENDIDIKAN</h5>
         <ul class="list-unstyled">
-          <li><a href="https://www.instagram.com/ppai_arridlo/" class="text-light text-decoration-none" target="_blank">Madrasah Diniyah</a></li>
+          <li><a href="https://www.instagram.com/ppai_arridlo/" class="text-light text-decoration-none" target="_blank">Madrasah Diniyah (MADIN)</a></li>
           <li><a href="https://www.instagram.com/mtsbahrulhuda/" class="text-light text-decoration-none" target="_blank">Madrasah Tsanawiyah (MTS)</a></li>
-          <li><a href="https://www.instagram.com/ma_arridlo/" class="text-light text-decoration-none" target="_blank">Madrasah Aliyah</a></li>
+          <li><a href="https://www.instagram.com/ma_arridlo/" class="text-light text-decoration-none" target="_blank">Madrasah Aliyah (MA)</a></li>
         </ul>
       </div>
 
@@ -179,8 +179,8 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
       </p>
     </div>
     <div class="col-12 text-center mt-4">
-      <a href="https://www.instagram.com/kknt18_ar.ridlo/" class="icon-link"><img src="../assets/icons/iconkknt.png" class="icon-img iconkknt"></a>
-      <a href="https://fahd39.com/" class="icon-link"><img src="../assets/icons/iconf.png" class="icon-img iconf"></a>
+      <a href="https://www.instagram.com/kknt18_ar.ridlo/" target="_blank" class="icon-link"><img src="../assets/icons/iconkknt.png" class="icon-img iconkknt"></a>
+      <a href="https://fahd39.com/" target="_blank" class="icon-link"><img src="../assets/icons/iconf.png" class="icon-img iconf"></a>
     </div>
     <hr class="my-4 mb-0 border-light mx-auto" style="width: 30%;">
   </div>
