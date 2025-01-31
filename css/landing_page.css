@@ -84,19 +84,24 @@ html, body {
     max-width: 100%;
 }
 .btn {
-    border-radius: 15px;
-    background-color: var(--second-color);
-    border: none;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+    color: white;
+    background-color: none;
+    border-width: 2px;
+    border-color: var(--second-color);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
 }
 .btn:hover {
+    color: white;
     background-color: var(--first-color);
+    border-color: var(--first-color);
 }
 .btn:active {
-    background-color: var(--second-color)!important;
+    background-color: var(--first-color)!important;
+    border-color: var(--first-color)!important;
 }
 @media (max-width: 768px) {
     html, body {

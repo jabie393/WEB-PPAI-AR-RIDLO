@@ -59,6 +59,7 @@ body {
 /* navbar style */
 .mynavbar {
   background-color: var(--second-color);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.562);
   color: white;
 }
 .navbar-brand {
@@ -222,5 +223,4 @@ footer .social-media a:hover {
   .navbtn {
     margin-top: 20px;
   }
-
 }
