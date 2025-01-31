@@ -52,7 +52,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
     const href = targetLink.getAttribute('href');
 
     // Jika href mengarah ke halaman index atau memiliki ID section
-    if (href && href.includes('index.html#')) {
+    if (href && href.includes('home.html#')) {
       // Navigasi ke halaman index dengan fragment
       window.location.href = href;
       return;

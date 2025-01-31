@@ -52,7 +52,7 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
           <!-- Brand Logo dan Nama -->
           <div class="d-flex align-items-center">
             <img src="../assets/logo/logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
-            <a class="navbar-brand mb-0 navtitle" href="index.html">PPAI AR-RIDLO</a>
+            <a class="navbar-brand mb-0 navtitle" href="home.html">PPAI AR-RIDLO</a>
           </div>
 
           <!-- Tombol Toggle -->
@@ -69,7 +69,7 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
   </div>
   <div class="offcanvas-body">
   <ul class="navbar-nav me-3 mb-2 mb-lg-0">
-    <a href="index.html" class="navlink">Beranda</a>
+    <a href="home.html" class="navlink">Beranda</a>
   <a href="logout.php"class="btn d-flex justify-content-center align-items-center w-100 navbtn" type="button">
     <i class="bi bi-box-arrow-right me-2"></i>
         Logout</a>
@@ -145,7 +145,7 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
     <!-- Social Media -->
     <div class="col-12 text-center mt-4">
       <div class="social-media d-flex justify-content-center gap-4">
-        <a href="index.html" class="text-light"><i class="bi bi-globe fs-4"></i></a>
+        <a href="home.html" class="text-light"><i class="bi bi-globe fs-4"></i></a>
         <a href="#Link Facebook" class="text-light"><i class="bi bi-facebook fs-4"></i></a>
         <a href="https://www.instagram.com/ppai_arridlo/" class="text-light"  target="_blank"><i class="bi bi-instagram fs-4"></i></a>
         <a href="#Link Twitter x" class="text-light"><i class="bi bi-twitter fs-4"></i></a>
