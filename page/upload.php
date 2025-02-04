@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
-    header("Location: login.html"); // Redirect ke halaman login jika tidak login
+    header("Location: login"); // Redirect ke halaman login jika tidak login
     exit();
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['flash_message'] = 'Terjadi kesalahan saat mengunggah gambar.';
         $_SESSION['flash_message_type'] = 'danger';
     }
-    header("Location: admin.php"); // Redirect kembali ke halaman admin
+    header("Location: admin"); // Redirect kembali ke halaman admin
     exit();
 } else {
     echo "Invalid request method.";

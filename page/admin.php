@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
-    header("Location: login.php");
+    header("Location: login");
     exit();
 }
 
@@ -52,7 +52,7 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
           <!-- Brand Logo dan Nama -->
           <div class="d-flex align-items-center">
             <img src="../assets/logo/logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
-            <a class="navbar-brand mb-0 navtitle" href="home.html">PPAI AR-RIDLO</a>
+            <a class="navbar-brand mb-0 navtitle" href="home">PPAI AR-RIDLO</a>
           </div>
           <!-- Tombol Toggle -->
           <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -68,8 +68,8 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
             </div>
             <div class="offcanvas-body">
             <ul class="navbar-nav me-3 mb-2 mb-lg-0">
-              <a href="home.html" class="navlink">Beranda</a>
-            <a href="logout.php"class="btn d-flex justify-content-center align-items-center w-100 navbtn" type="button">
+              <a href="home" class="navlink">Beranda</a>
+            <a href="logout"class="btn d-flex justify-content-center align-items-center w-100 navbtn" type="button">
               <i class="bi bi-box-arrow-right me-2"></i>
                   Logout</a>
           </ul>
@@ -89,14 +89,14 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
                 </div>
             <?php endif; ?>
 
-            <form action="upload.php" method="POST" enctype="multipart/form-data">
+            <form action="upload" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="pageSelect" class="form-label">Pilih Halaman:</label>
                     <select class="form-select" id="pageSelect" name="page">
                         <option value="page/biaya.html">Biaya</option>
                         <option value="page/info_pendaftaran.html">Info Pendaftaran</option>
                         <option value="page/jadwal.html">Jadwal Kegiatan</option>
-                        <option value="page/peraturan.html">Peraturan Pesantren</option>
+                        <option value="page/peraturanhtml">Peraturan Pesantren</option>
                     </select>
                 </div>
                 <div class="mb-3 imgselect">
@@ -144,7 +144,7 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
     <!-- Social Media -->
     <div class="col-12 text-center mt-4">
       <div class="social-media d-flex justify-content-center gap-4">
-        <a href="home.html" class="text-light"><i class="bi bi-globe fs-4"></i></a>
+        <a href="home" class="text-light"><i class="bi bi-globe fs-4"></i></a>
         <a href="#Link Facebook" class="text-light"><i class="bi bi-facebook fs-4"></i></a>
         <a href="https://www.instagram.com/ppai_arridlo/" class="text-light"  target="_blank"><i class="bi bi-instagram fs-4"></i></a>
         <a href="#Link Twitter x" class="text-light"><i class="bi bi-twitter fs-4"></i></a>
