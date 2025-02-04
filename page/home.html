@@ -29,7 +29,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md sticky-top py-3 mynavbar">
+    <nav class="navbar navbar-expand-lg sticky-top py-3 mynavbar">
       <div class="container d-flex justify-content-between align-items-center">
         <!-- Brand Logo dan Nama -->
         <div class="d-flex align-items-center">
@@ -65,6 +65,7 @@
             </li>
             <a class="nav-link" href="home.html#ekstra">Ekstra</a>
             <a class="nav-link" href="home.html#galeri">Galeri</a>
+            <a class="nav-link" href="home.html#masyayikh">Masyayikh</a>
             <a class="nav-link" href="home.html#kontak">Kontak</a>
             <a href="" class="btn btn-sm btn-outline-secondary d-flex justify-content-center align-items-center w-100 navbtn" type="button">
               <i class="bi bi-person me-2"></i>
@@ -172,7 +173,7 @@
 
 <!-- Galeri -->
 <section id="galeri" class="galeri">
-  <div class="container">
+  <div class="container mb-4">
       <h2 class="title text-center">Galeri</h2>
       <div class="row">
           <!-- Galeri Item 1 -->
@@ -193,7 +194,7 @@
                   <div class="card-body">
                       <h5 class="card-title">Kegiatan Santri Putra</h5>
                       <p class="card-text">
-                        Beragam kegiatan santri putra di Pesantren PPAI AR-RIDLO meliputi pembelajaran agama, pengembangan keterampilan, serta aktivitas pembentukan karakter islami, guna mencetak generasi yang unggul, berakhlak mulia, dan siap menghadapi tantangan. masa depan.</p>
+                       Tersedia beragam kegiatan bagi santri putra di Pesantren PPAI AR-RIDLO meliputi pembelajaran agama, pengembangan keterampilan, serta aktivitas pembentukan karakter islami, guna mencetak generasi yang unggul, berakhlak mulia, dan siap menghadapi tantangan. masa depan.</p>
                       <a href="#Link Gallery Examination hall" class="btn galeribtn">Lihat Selengkapnya</a>
                   </div>
               </div>
@@ -223,6 +224,31 @@
       </div>
   </div>
   </section>
+
+<!-- Pendiri & Pengasuh -->
+<section id="masyayikh" class="masyayikh">
+  <div class="container text-center mb-4">
+    <h2 class="mb-4 title">Masyayikh</h2>
+    <p class="masyayikh-subtitle pendirititle">
+      Pendiri pesantren PPAI AR-RIDLO:
+    </p>
+
+    <!-- Pendiri -->
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6"> <!-- Perbesar card -->
+        <div class="card text-center shadow-sm cardpendiri">
+          <img src="../assets/galeri/pendiri.png" class="card-img-top w-100"
+               alt="Foto Pendiri Pesantren">
+          <div class="card-body">
+            <h5 class="card-title">Almaghfurlah KH. Moh. Ali</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Kontak -->
   <section id="kontak" class="kontak">
     <h2 class="title">
       Kontak
@@ -238,11 +264,11 @@
         </div>
         <div class="infoitem">
           <i class="bi bi-telephone-fill"></i>
-          <span>+62 858 1200 7371</span>
+          <span>+62 856 5555 2824</span>
         </div>
         <div class="infoitem">
           <i class="bi bi-envelope-fill"></i>
-          <span>wahyurojabi393@gmail.com</span>
+          <span>arridlokalipare@gmail.com</span>
         </div>
       </div>
     </div>
@@ -352,13 +378,13 @@
       duration: 2000,
       delay: 200
 });
-    ScrollReveal().reveal('.profilsubtitle, .ekstrasubtitle, .ekstracard-qiraah, .cardkanan, .kontakright', {
+    ScrollReveal().reveal('.profilsubtitle, .ekstrasubtitle, .ekstracard-qiraah, .cardkanan, .kontakright, .cardpendiri', {
       origin: 'bottom',
       distance: '50px',
       duration: 2000,
       delay: 400
 });
-    ScrollReveal().reveal('.profilimg img, .ekstracard-hadrah, .ekstracard-voli, .cardkiri, .map-container', {
+    ScrollReveal().reveal('.profilimg img, .ekstracard-hadrah, .ekstracard-voli, .cardkiri, .map-container, .pendirititle', {
       origin: 'left',
       distance: '100px',
       duration: 2000,

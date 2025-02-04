@@ -122,6 +122,10 @@ section {
     border-color: var(--first-color);
     background-color: var(--first-color);
 }
+.navbtn:hover {
+  background-color: #02A302;
+  border-color: #02A302;
+}
 .adminbtn {
   margin-left: 15px;
   color: white;
@@ -287,7 +291,7 @@ section {
   text-indent: 20px;
   color: black;
   text-align: justify;
-  margin: 20px;
+  margin: 20px 5px;
   font-size: 1rem; /* Ukuran default untuk layar kecil */
   line-height: 1.5; /* Menambahkan jarak antar baris untuk keterbacaan */
 }
@@ -334,6 +338,44 @@ section {
     text-align: center;
     color: #666;
     font-size: 14px;
+}
+/* ===== MASYAYIKH STYLE ===== */
+.masyayikh {
+  padding: 0px 15px;
+  background-color: whitesmoke;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.masyayikhcontainer {
+  max-width: 100%;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.masyayikhsubtitle {
+  text-indent: 20px;
+  color: black;
+  text-align: center;
+  margin: 20px 5px;
+  font-size: 1rem; /* Ukuran default untuk layar kecil */
+  line-height: 1.5; /* Menambahkan jarak antar baris untuk keterbacaan */
+}
+.cardpendiri {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+}
+.cardpendiri img {
+  height: 100%;
+  object-fit: cover;
 }
 /* ===== CONTACT FORM ===== */
 .kontakcontainer {
@@ -538,6 +580,10 @@ footer {
       font-size: 0.70rem;
       line-height: 1.75;
     }
+    .masyayikhsubtitle {
+      font-size: 0.70rem;
+      line-height: 1.75;
+    }
     .kontakcontainer {
       display: flex;
       flex-wrap: nowrap; /* Tidak membungkus elemen */
@@ -602,6 +648,10 @@ footer {
       line-height: 2;
     }
     .ekstrasubtitle {
+      font-size: 1rem;
+      line-height: 2;
+    }
+    .masyayikhsubtitle {
       font-size: 1rem;
       line-height: 2;
     }
