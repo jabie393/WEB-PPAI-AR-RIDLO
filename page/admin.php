@@ -46,57 +46,36 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
 </div>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top py-3 mynavbar">
-      <div class="container d-flex justify-content-between align-items-center">
-        <!-- Brand Logo dan Nama -->
-        <div class="d-flex align-items-center">
-          <img src="../assets/logo/logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
-          <a class="navbar-brand mb-0" href="home.html">PPAI AR-RIDLO</a>
-        </div>
-    
-        <!-- Tombol Toggle -->
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-      <!-- Offcanvas Menu -->
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">PPAI AR-RIDLO</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <div class="navbar-nav ms-auto">
-            <a class="nav-link" href="home.html#profil">Profil</a>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Informasi
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="biaya.html"><i class="bi bi-cash"></i> Biaya</a></li>
-                <li><a class="dropdown-item" href="info_pendaftaran.html"><i class="bi bi-person"></i> Info Pendaftaran</a></li>
-                <li><a class="dropdown-item" href="jadwal.html"><i class="bi bi-calendar"></i> Jadwal Kegiatan</a></li>
-                <li><a class="dropdown-item" href="peraturan.html"><i class="bi bi-bank"></i> Peraturan Pesantren</a></li>
-              </ul>
-            </li>
-            <a class="nav-link" href="home.html#ekstra">Ekstra</a>
-            <a class="nav-link" href="home.html#galeri">Galeri</a>
-            <a class="nav-link" href="home.html#masyayikh">Masyayikh</a>
-            <a class="nav-link" href="home.html#kontak">Kontak</a>
-            <a href="" class="btn btn-sm btn-outline-secondary d-flex justify-content-center align-items-center w-100 navbtn" type="button">
-              <i class="bi bi-person me-2"></i>
-              Pendaftaran
-            </a>
-            <a href="../page/admin.php"class="btn btn-sm btn-outline-secondary d-flex justify-content-center align-items-center w-100 adminbtn" type="button">
-              <i class="bi bi-person-circle me-2"></i>
-              Admin
-            </a>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md sticky-top py-3 mynavbar">
+        <div class="container d-flex justify-content-between align-items-center">
+          <!-- Brand Logo dan Nama -->
+          <div class="d-flex align-items-center">
+            <img src="../assets/logo/logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+            <a class="navbar-brand mb-0 navtitle" href="home.html">PPAI AR-RIDLO</a>
           </div>
+          <!-- Tombol Toggle -->
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
-      </div>
-    </nav>
+          <!-- Offcanvas Menu -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">PPAI AR-RIDLO</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+            <ul class="navbar-nav me-3 mb-2 mb-lg-0">
+              <a href="home.html" class="navlink">Beranda</a>
+            <a href="logout.php"class="btn d-flex justify-content-center align-items-center w-100 navbtn" type="button">
+              <i class="bi bi-box-arrow-right me-2"></i>
+                  Logout</a>
+          </ul>
+            </div>
+          </div>
+      </nav>
 
       <div class="container-fluid p-0">
         <div class="container mt-5">
