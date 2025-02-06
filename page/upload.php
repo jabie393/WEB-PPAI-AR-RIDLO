@@ -4,6 +4,7 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
     header("Location: login"); // Redirect ke halaman login jika tidak login
     exit();
 }
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $page = $_POST['page'];
     $image = $_FILES['image'];
@@ -17,19 +18,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             mkdir($uploadDir, 0777, true);
         }
 
+        // Jika file dengan nama yang sama sudah ada, hapus sebelum diunggah ulang
+        if (file_exists($uploadPath)) {
+            unlink($uploadPath);
+        }
+
         $htmlPath = "../$page";
         if (file_exists($htmlPath)) {
             $htmlContent = file_get_contents($htmlPath);
 
+            // Cari gambar lama yang digunakan dalam halaman
             preg_match('/<section.*?<img src="(.*?)"/s', $htmlContent, $matches);
             if (!empty($matches[1])) {
                 $oldImagePath = $matches[1];
-                $oldImageFullPath = realpath(dirname(__FILE__) . '/../uploads/' . $oldImagePath);
-                if ($oldImageFullPath && file_exists($oldImageFullPath)) {
+
+                // Pastikan hanya menghapus file yang berada di dalam folder uploads
+                $oldImageFullPath = realpath(dirname(__FILE__) . '/../' . $oldImagePath);
+                if ($oldImageFullPath && strpos($oldImageFullPath, realpath($uploadDir)) === 0 && file_exists($oldImageFullPath)) {
                     unlink($oldImageFullPath);
                 }
             }
 
+            // Pindahkan file baru setelah menghapus file lama
             if (move_uploaded_file($image['tmp_name'], $uploadPath)) {
                 $updatedContent = preg_replace_callback(
                     '/<section.*?<img src=".*?"(.*?)>/s',
@@ -60,6 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['flash_message'] = 'Terjadi kesalahan saat mengunggah gambar.';
         $_SESSION['flash_message_type'] = 'danger';
     }
+    
     header("Location: admin"); // Redirect kembali ke halaman admin
     exit();
 } else {
