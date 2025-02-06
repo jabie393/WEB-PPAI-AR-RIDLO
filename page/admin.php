@@ -167,7 +167,7 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
         <a href="https://www.instagram.com/adeardiansyaah/" target="_blank">Ade,</a>
         <a href="https://www.instagram.com/swxrdhana_aji/" target="_blank">Aji,</a>
         <a href="https://www.instagram.com/ramdfks/" target="_blank">Rama,</a>
-        <a href="#abdus">Abdus,</a>
+        <a href="https://www.instagram.com/abdussalamm3/" target="_blank">Abdus,</a>
         <a href="https://www.instagram.com/erika.pramudy/" target="_blank">Erika,</a>
         <a href="https://www.instagram.com/lailaa.qfr/" target="_blank">Firli,</a>
         <a href="https://www.instagram.com/firnandaulfa_02/" target="_blank">Firnanda,</a>
