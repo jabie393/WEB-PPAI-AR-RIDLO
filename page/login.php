@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <a class="nav-link" href="home#galeri">Galeri</a>
             <a class="nav-link" href="home#masyayikh">Masyayikh</a>
             <a class="nav-link" href="home#kontak">Kontak</a>
-            <a href="" class="btn btn-sm btn-outline-secondary d-flex justify-content-center align-items-center w-100 navbtn" type="button">
+            <a href="https://forms.gle/6tGVXMPG2aoBUWCD6" target="_blank" class="btn btn-sm btn-outline-secondary d-flex justify-content-center align-items-center w-100 navbtn" type="button">
               <i class="bi bi-person me-2"></i>
               Pendaftaran
             </a>
