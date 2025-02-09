@@ -96,7 +96,7 @@ if (isset($_SESSION['flash_message']) && isset($_SESSION['flash_message_type']))
                         <option value="page/biaya.html">Biaya</option>
                         <option value="page/info_pendaftaran.html">Info Pendaftaran</option>
                         <option value="page/jadwal.html">Jadwal Kegiatan</option>
-                        <option value="page/peraturanhtml">Peraturan Pesantren</option>
+                        <option value="page/peraturan.html">Peraturan Pesantren</option>
                     </select>
                 </div>
                 <div class="mb-3 imgselect">

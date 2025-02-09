@@ -50,7 +50,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: whitesmoke;
     font-family: "poppins", serif;
     overflow-x: hidden;
 }
@@ -138,17 +138,6 @@ body {
 .offcanvas {
     background-color: var(--second-color); /* Ganti dengan warna yang diinginkan */
 }
-.bodycontainer {
-    display: flex;
-    margin: 0px auto;
-    max-width: 100%;
-    padding: 0px;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column; /* Mengatur elemen vertikal */
-    align-items: center; /* Menyelaraskan secara horizontal di tengah */
-    gap: 0px;
-}
 
 /* main style */
 .maincontainer {
@@ -157,12 +146,6 @@ body {
     align-items: center;
     gap: 20px;
     text-align: center;
-    background-color: whitesmoke;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
 }
 .title {
     display: inline-block;
