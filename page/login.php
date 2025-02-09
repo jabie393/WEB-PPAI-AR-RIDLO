@@ -2,8 +2,8 @@
 session_start();
 
 // Hard-coded admin credentials (bisa diganti dengan database)
-$adminUsername = 'admin';
-$adminPassword = 'password123'; // Sebaiknya gunakan hashing di produksi, seperti password_hash()
+$adminUsername = 'arridlo';
+$adminPassword = 'ppaiarridlo25'; // Sebaiknya gunakan hashing di produksi, seperti password_hash()
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
